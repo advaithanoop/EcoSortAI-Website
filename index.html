@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoSort AI – Ultra‑Luxury Smart Trash Sorting</title>
+  <meta name="description" content="Revolutionizing waste management with AI‑powered smart sorting. Premium dashboard, real‑time analytics, and intelligent chatbot."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=1" />
+  <!-- External libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div id="debug-banner" style="position:fixed;top:0;left:0;width:100%;background:#ff00ff;color:#000;padding:0.5rem;text-align:center;font-weight:bold;z-index:2000;">🚀 Premium redesign v2 loaded – refresh to see changes</div>
+  <!-- Sticky Glass‑Navigation -->
+  <nav class="navbar">
+    <div class="logo">EcoSort AI</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Revolutionizing Waste Management with AI</h1>
+      <p class="subhead">Smart automated trash classification that drives sustainability and efficiency.</p>
+      <div class="cta">
+        <a href="#demo" class="btn btn-emerald">Live Demo</a>
+        <a href="#dashboard" class="btn btn-cyan">View Analytics</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="hero_section_1779789788865.png" alt="3D robotic arm sorting trash" />
+    </div>
+    <div id="particles-bg"></div>
+  </section>
+
+  <!-- Feature Carousel -->
+  <section id="features" class="section features">
+    <h2>Smart Features</h2>
+    <div class="carousel" id="featureCarousel">
+      <div class="feature-card">
+        <div class="icon"><img src="https://cdn.jsdelivr.net/gh/tabler-icons/tabler-icons/icons/robot.svg" alt="AI Detection" /></div>
+        <h3>AI‑Powered Object Detection</h3>
+        <p>Identify waste in real‑time with computer vision.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon"><img src="https://cdn.jsdelivr.net/gh/tabler-icons/tabler-icons/icons/plug.svg" alt="IoT Sensors" /></div>
+        <h3>IoT Sensor Integration</h3>
+        <p>Live monitoring of bins, fill levels, and routes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon"><img src="https://cdn.jsdelivr.net/gh/tabler-icons/tabler-icons/icons/chart-pie.svg" alt="Analytics" /></div>
+        <h3>Real‑Time Analytics</h3>
+        <p>Instant insights into recycling efficiency.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Slider -->
+  <section id="testimonials" class="section testimonials">
+    <h2>What Our Partners Say</h2>
+    <div class="testimonials-slider" id="testimonialsSlider">
+      <div class="testimonial-card">
+        <img src="https://via.placeholder.com/80" alt="User avatar" class="avatar" />
+        <p>“EcoSort transformed our waste workflow – 30% less landfill!”</p>
+        <span class="author">- GreenTech Corp.</span>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://via.placeholder.com/80" alt="User avatar" class="avatar" />
+        <p>“The AI insights are a game‑changer for sustainability reporting.”</p>
+        <span class="author">- City Waste Dept.</span>
+      </div>
+      <div class="testimonial-card">
+        <img src="https://via.placeholder.com/80" alt="User avatar" class="avatar" />
+        <p>“Our recycling rate jumped from 55% to 88% in weeks.”</p>
+        <span class="author">- EcoFuture Labs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Cards -->
+  <section id="pricing" class="section pricing">
+    <h2>Choose Your Plan</h2>
+    <div class="toggle-switch">
+      <span>Monthly</span>
+      <label class="switch"><input type="checkbox" id="pricingToggle"><span class="slider"></span></label>
+      <span>Annual</span>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card" data-plan="Free">
+        <h3>Free</h3>
+        <p class="price" data-month="0" data-annual="0">$0</p>
+        <ul>
+          <li>Basic AI sorting</li>
+          <li>Limited analytics</li>
+        </ul>
+        <a href="#" class="btn btn-emerald">Get Started</a>
+      </div>
+      <div class="pricing-card" data-plan="Pro">
+        <h3>Pro</h3>
+        <p class="price" data-month="49" data-annual="449">$49/mo</p>
+        <ul>
+          <li>Advanced AI detection</li>
+          <li>Full dashboard</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="#" class="btn btn-cyan">Upgrade</a>
+      </div>
+      <div class="pricing-card" data-plan="Enterprise">
+        <h3>Enterprise</h3>
+        <p class="price" data-month="149" data-annual="1499">$149/mo</p>
+        <ul>
+          <li>Custom integration</li>
+          <li>Dedicated account manager</li>
+          <li>Unlimited waste streams</li>
+        </ul>
+        <a href="#" class="btn btn-emerald">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real‑Time Dashboard -->
+  <section id="dashboard" class="section dashboard">
+    <h2>Real‑Time Trash Sorting Dashboard</h2>
+    <div class="stats-grid">
+      <div class="card">
+        <h3>Total Waste Processed</h3>
+        <p class="number" id="totalWaste">12,345 kg</p>
+      </div>
+      <div class="card">
+        <h3>Recycling Efficiency</h3>
+        <p class="number" id="efficiency">87%</p>
+      </div>
+      <div class="card">
+        <h3>Daily Waste Trend</h3>
+        <canvas id="lineChart"></canvas>
+      </div>
+      <div class="card">
+        <h3>Carbon‑Footprint Reduction</h3>
+        <canvas id="pieChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating AI Chatbot -->
+  <div class="chatbot-float" id="chatbotToggle">
+    <div class="chatbot-icon">🤖</div>
+    <div class="chatbot-panel hidden" id="chatbotPanel">
+      <div class="chat-header">EcoSort AI Assistant</div>
+      <div class="chat-body" id="chatBody">
+        <div class="bubble bot">Hello! Ask me about waste types or our AI features.</div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type a message..." id="chatInput" />
+        <button id="sendBtn">Send</button>
+        <span class="voice" title="Voice input">🎤</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="#" aria-label="Twitter"><img src="https://cdn.jsdelivr.net/gh/tabler-icons/tabler-icons/icons/brand-twitter.svg" alt="Twitter" /></a>
+        <a href="#" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/tabler-icons/tabler-icons/icons/brand-linkedin.svg" alt="LinkedIn" /></a>
+        <a href="#" aria-label="GitHub"><img src="https://cdn.jsdelivr.net/gh/tabler-icons/tabler-icons/icons/brand-github.svg" alt="GitHub" /></a>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <h3>Contact Us</h3>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="3" required></textarea>
+        <button type="submit" class="btn btn-emerald">Send Message</button>
+      </form>
+    </div>
+    <p class="footer-note">© 2026 EcoSort AI – All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
